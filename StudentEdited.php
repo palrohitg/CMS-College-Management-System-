@@ -1,0 +1,20 @@
+<?php 
+ if(isset($_GET['Search'])){
+  $link=mysqli_connect("localhost","root","","vikasproject");
+  $id=$_GET['Search'];
+  $name=$_GET['Name'];
+  $age=$_GET['Age'];
+  $gender=$_GET['Gender'];
+  $dob=$_GET['DOB'];
+  $city=$_GET['City'];
+  $state=$_GET['State'];
+  $email=$_GET['Email'];
+  $classid=$_GET['ClassId'];
+  $streamid=$_GET['StreamId'];
+  $mobileno=$_GET['MobileNo'];
+  $address=$_GET['Address'];
+  $classid=$_GET['ClassId'];
+  $status=$_GET['Status']; 
+  $result=mysqli_query($link,"UPDATE students SET Name='$name',Age='$age',Gender='$gender',Dob='$dob',City='$city',State='$state',Email='$email',MobileNo='$mobileno',ClassId='$classid',StreamId='$streamid',Address='$address' ,Status='$status' WHERE StudentId='$id'");
+}
+  ?>
